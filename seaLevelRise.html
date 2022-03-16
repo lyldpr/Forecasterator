@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+
+    <title>Sea Level Rise Projection</title>
+
+    <link rel="stylesheet" href="style.css"> 
+    <!-- <script language="javascript" type="text/javascript" src="sliderControls.js"></script> -->
+</head>
+<body>
+
+    <!-- https://ss2.climatecentral.org/#14/32.7873/-79.9506?show=satellite&projections=1-K14_RCP85-SLR&level=10&unit=feet&pois=hide -->
+
+    <!-- put info here: total number of properties, avg sea level rise, avg price per night, walkability etc... -->
+    <header> </header>
+
+
+    <div id="map">
+        <!-- set map as background image -->
+    </div>
+
+    <div id ="sealevelrise">
+    </div> 
+
+    <div class="slidecontainer">
+        <input type="range" min="2022" max="2200" value="2022" class="slider-square" id="sliderRange">
+        <p> Year: <span id="year"></span></p>
+    </div>
+
+    <script> 
+        var slider = document.getElementById("sliderRange");
+        var output = document.getElementById("year");
+        output.innerHTML = slider.value; // Display the default slider value
+
+        // Update the current slider value (each time you drag the slider handle)
+        slider.oninput = function() {
+            year = this.value; 
+
+            // if the year is less than 2060, no sea significant level rise 
+            if(year < 2060){
+                // display no filter 
+                // document.getElementById("sealevelrise")
+
+            }
+
+            else if(year >= 2060){
+                // display 1 ft rise filter
+
+                // remove affected homes 
+            }
+
+            else if(year >= 2090){
+                // hide all other filters 
+                // display 2 ft rise filter 
+                // remove affected homes 
+            }
+
+            else if(year >= 2120){
+                // hide all other filters 
+                // display 3 ft rise filter 
+                // remove affected homes 
+            }
+
+            else if(year >= 2140){
+                // hide all other filters 
+                // display 4 ft rise filter 
+                // remove affected homes 
+            }
+
+            else if(year >= 2170){
+                // hide all other filters 
+                // display 5 ft rise filter 
+                // remove affected homes 
+            }
+
+            else if(year >= 2190){
+                // hide all other filters 
+                // display 6 ft rise filter 
+                // remove affected homes 
+            }
+
+            else if(year >= 2200){
+                // hide all other filters 
+                // display 7 ft rise filter 
+                // remove affected homes 
+            }
+
+
+            // display the year 
+            output.innerHTML = year;
+        }
+    </script> 
+</body>
+</html>
