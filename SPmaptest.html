@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html>
+
   <head>
     <title>Simple Map</title>
+
     <!--authorizing firebase-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
-    <style>
-        #map {
-            height: 100%;
-        }
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
-        html,
-        body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"> 
   </head>
+
   <body>
     <div id="map"></div><!--actual map that loads along with a required *restricted* API key-->
-    <script
-      src="https://maps.googleapis.com/maps/api/js?key=&callback=initMap&v=weekly"
-      async
-    ></script>
+
+    <div class="slidecontainer">
+      <input type="range" min="2022" max="2200" value="2022" class="slider-square" id="sliderRange">
+      <p> Year: <span id="year"></span></p>
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKw_xSr57-PX3VPIPo02BhZ3EuhI3y6w&callback=initMap&v=weekly"
+      async></script>
     <script src="SPmaptest.js"></script>
+    <script src = "sliderControls.js"> </script>
   </body>
+
 </html>
 <!-- or  first key is firebase and second key is google maps api JL--> 

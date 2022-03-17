@@ -1,4 +1,20 @@
 
+const firebaseConfig = {
+    apiKey: "AIzaSyD6pyQSvV0Hubn0cAru0SmqzOgowbYgI6I",
+    authDomain: "forecasterator-project.firebaseapp.com",
+    projectId: "forecasterator-project",
+    storageBucket: "forecasterator-project.appspot.com",
+    messagingSenderId: "44874632175",
+    appId: "1:44874632175:web:28ac7bc441a9c89a33041a",
+    measurementId: "G-WGHEB3C8SM"
+};
+// jaxson lyles forecasterator
+// defining and initializing google firebase and firestore
+firebase.initializeApp({
+    apiKey: "AIzaSyD6pyQSvV0Hubn0cAru0SmqzOgowbYgI6I",
+    authDomain: "forecasterator-project.firebaseapp.com",
+    projectId: "forecasterator-project",
+});
 
 const db = firebase.firestore();
 
@@ -32,10 +48,20 @@ async function initMap() {
     let locationsList = await createItems();
     // the map default function centers the map over these coords (aka charleston)
     let map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 13,
-        center: new google.maps.LatLng(32.780925,-79.935150),
+        zoom: 14,
+        center: new google.maps.LatLng(32.791430,-79.944280),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     });
+
+    let filter = new google.maps.KmlLayer("filters/1ft-2060.kmz", {
+        suppressInfoWindows: true,
+        preserveViewport: false,
+        map: map
+      });
+
+    // let filter = new google.maps.KmlLayer("filters/1ft-2060.kmz");
+    // filter.setMap(map);
+
 
     // setting up for the markers
     let infowindow = new google.maps.InfoWindow();
