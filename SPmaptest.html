@@ -9,7 +9,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="geoxml3.js"></script>
 
     <link rel="stylesheet" href="style.css"> 
   </head>
@@ -19,11 +18,14 @@
 
     <div class="slidecontainer">
       <input type="range" min="2022" max="2200" value="2022" class="slider-square" id="sliderRange">
-      <p> Year: <span id="year"></span></p>
+      <p> Year: <span id="year"></p>
+
+      <p></span> Sea Level Rise: <span id="rise"> </span></p>
     </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKw_xSr57-PX3VPIPo02BhZ3EuhI3y6w&callback=initMap&v=weekly"
       async></script>
+
     <script src="SPmaptest.js"></script>
   </body>
 
