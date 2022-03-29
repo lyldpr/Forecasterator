@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>Simple Map</title>
+    <title>Forcasterator</title>
 
     <!--authorizing firebase-->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
@@ -14,13 +14,26 @@
   </head>
 
   <body>
+    <nav> 
+      <ul> 
+        <li> <a href = "about.html"> ABOUT </a> </li> 
+        <!-- <li> </li>  -->
+        <!-- <li> </li>  -->
+        <li> Total Active Locations: <span id = "activeLocations"> </span> </li> 
+
+        <li>Total Inactive Locations: <span id="inactiveLocations"> </span> </li> 
+
+        <li> Current Sea Level Rise: <span id = "rise"> </span> </li> 
+
+        <li> Average Price Per Night: $<span id="price"></span> </li> 
+    </nav> 
+
     <div id="map"></div><!--actual map that loads along with a required *restricted* API key-->
 
     <div class="slidecontainer">
       <input type="range" min="2022" max="2200" value="2022" class="slider-square" id="sliderRange">
       <p> Year: <span id="year"></p>
 
-      <p></span> Sea Level Rise: <span id="rise"> </span></p>
     </div>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKw_xSr57-PX3VPIPo02BhZ3EuhI3y6w&callback=initMap&v=weekly"

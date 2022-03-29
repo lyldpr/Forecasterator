@@ -1,8 +1,40 @@
+* {box-sizing: border-box; 
+}
+
 html, body {
     height: 100%;
     margin: 0;
     padding: 0;
 }
+
+h1, h2, h3, h4{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #5a8473;
+}
+
+p, nav li{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #3c3c41;
+    line-height: 1.5em;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+nav {  
+    /* letter-spacing: 0.1em; */
+    font-weight: bold;
+    text-align: center; 
+    font-size: 99%;
+    padding: .25em;
+} 
+nav ul{ 
+    display: flex; 
+    flex-flow: row nowrap;
+    justify-content: space-around; 
+    list-style-type: none;
+
+}
+
 
 /* SLIDER */ 
 .slidecontainer {
@@ -49,5 +81,5 @@ html, body {
 
 /* MAP */ 
 #map {
-    height: 100%;
+    height: 80%;
 }
