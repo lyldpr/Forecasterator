@@ -194,7 +194,7 @@ async function initMap() {
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = "0 Ft"; 
+            riseOutput.innerHTML = "0 ft"; 
         } 
 
         //.5 ft
@@ -214,7 +214,7 @@ async function initMap() {
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = ".5 Ft"; 
+            riseOutput.innerHTML = ".5 ft"; 
         }
 
         // 1 ft
@@ -224,13 +224,18 @@ async function initMap() {
             kmlLayer1ft.setMap(map);
 
             // hide all other layers 
+            kmlLayer_5ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
             kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
             kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
             kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = "1 Ft"; 
+            riseOutput.innerHTML = "1 ft"; 
         }
         
         //1.5 ft
@@ -240,6 +245,7 @@ async function initMap() {
 
 
             //hide all others 
+            kmlLayer_5ft.setMap(null);
             kmlLayer1ft.setMap(null);
             kmlLayer2ft.setMap(null);
             kmlLayer2_5ft.setMap(null);
@@ -250,65 +256,129 @@ async function initMap() {
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = "1.5 Ft"; 
+            riseOutput.innerHTML = "1.5 ft"; 
 
         }
 
         // 2ft 
         // if between 2090 and 2120
-        else if(currentYear >= 2090 && currentYear < 2120){
+        else if(currentYear >= 2090 && currentYear < 2110){
             // show the current layer (2ft)
             kmlLayer2ft.setMap(map);
 
-            // hide all other layers 
+            kmlLayer_5ft.setMap(null);
             kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
             kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
             kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = "2 Ft"; 
+            riseOutput.innerHTML = "2 ft"; 
+        }
 
         //2.5 ft
+        else if(currentYear >= 2110 && currentYear < 2120){
+            // show the current layer (2.5ft)
+            kmlLayer2_5ft.setMap(map);
+
+            kmlLayer_5ft.setMap(null);
+            kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
+            kmlLayer2ft.setMap(null);
+            kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
+            kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
+            kmlLayer5ft.setMap(null);
+
+            // display seal level rise 
+            riseOutput.innerHTML = "2.5 ft"; 
+
 
         //3 ft
         // if between 2120 and 2140 
-        }else if(currentYear >= 2120 && currentYear < 2140){
+        }else if(currentYear >= 2120 && currentYear < 2130){
             // show the current layer (3ft)
             kmlLayer3ft.setMap(map);
 
-            // hide all other layers 
+            kmlLayer_5ft.setMap(null);
             kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
             kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
+            kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
+            kmlLayer5ft.setMap(null);
+
+            // display seal level rise 
+            riseOutput.innerHTML = "3 ft"; 
+        }
+        // 3.5 ft
+        else if(currentYear >= 2130 && currentYear < 2140){
+            // show the current layer (3.5ft)
+            kmlLayer3_5ft.setMap(map);
+
+            kmlLayer_5ft.setMap(null);
+            kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
+            kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
+            kmlLayer3ft.setMap(null);
+            kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
+            kmlLayer5ft.setMap(null);
+
+            // display seal level rise 
+            riseOutput.innerHTML = "3.5 ft"; 
+
+        //4ft 
+        // if between 2140 and 2170 
+        }else if(currentYear >= 2140 && currentYear < 2155){
+            // show the current layer (4ft)
+            kmlLayer4ft.setMap(map);
+
+            kmlLayer_5ft.setMap(null);
+            kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
+            kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
+            kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
+            kmlLayer5ft.setMap(null);
+
+            // display seal level rise 
+            riseOutput.innerHTML = "4 ft"; 
+        
+        }
+        //4.5ft
+        else if(currentYear >= 2155 && currentYear < 2170){
+            // show the current layer (4.5ft)
+            kmlLayer4_5ft.setMap(map);
+
+            kmlLayer_5ft.setMap(null);
+            kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
+            kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
+            kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(map);
             kmlLayer4ft.setMap(null);
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = "3 Ft"; 
+            riseOutput.innerHTML = "4.5 ft"; 
 
-        // 3.5 ft
-
-        //4ft 
-        // if between 2140 and 2170 
-        }else if(currentYear >= 2140 && currentYear < 2170){
-            // show the current layer (4ft)
-            kmlLayer4ft.setMap(map);
-
-            // hide all other layers 
-            kmlLayer1ft.setMap(null);
-            kmlLayer2ft.setMap(null);
-            kmlLayer3ft.setMap(null);
-            kmlLayer5ft.setMap(null);
-
-            // display seal level rise 
-            riseOutput.innerHTML = "4 Ft"; 
-        
-        
-        //4.5ft
+        }
 
         //5ft 
         // if > 2170 
-        }else if(currentYear >=2170){
+        else if(currentYear >=2170){
             // show the current layer (5ft)
             kmlLayer5ft.setMap(map);
 
@@ -319,7 +389,7 @@ async function initMap() {
             kmlLayer4ft.setMap(null);
 
             // display seal level rise 
-            riseOutput.innerHTML = "5 Ft"; 
+            riseOutput.innerHTML = "5 ft"; 
         }
 
     });
