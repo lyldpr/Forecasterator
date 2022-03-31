@@ -82,23 +82,39 @@ async function initMap() {
     // SEA LEVEL RISE FILTERS 
 
     // load source links
-    var filter1ft = 'http://drive.google.com/uc?id=1988f8CgwMF8YnWJHEp1SLd5YzXkqhivH';
-    // var filter2ft = 'http://drive.google.com/uc?id=15ZTYieM2S9kvEsHav0GcJrbasVLaU7yz'; 
-    var filter2ft = 'http://drive.google.com/uc?id=11Q2cTAIPmnLTa8SjAWpQbNqi-W8FJZyd'; 
-    var filter3ft = 'http://drive.google.com/uc?id=1G5vg6_dlDdYys4EDu1G9rxtdgy2nZ58N'; 
-    var filter4ft = 'http://drive.google.com/uc?id=1bZm3CpX3E-9VlyyM1VL_tb_-rZx1i4uy'; 
-    var filter5ft = 'http://drive.google.com/uc?id=1oLOx4aAU06_u221cAv-NbIKhNYg7cjdN'; 
+    var filter_5ft  = 'http://drive.google.com/uc?id=1T0fvxuuecY9e7BKWQYPF3gvOTJ192G8Y'; 
+    var filter1ft   = 'http://drive.google.com/uc?id=1vUValgWXtL4W3Ww94gjmMIza51JzEfeh';
+    var filter1_5ft = 'http://drive.google.com/uc?id=1PxXqIWquANje49J6cUdtQI_tB5uJVJK6'; 
+    var filter2ft   = 'http://drive.google.com/uc?id=164FszKCFM4kHsKK4MDjdC3MZyeniVl02'; 
+    var filter2_5ft = 'http://drive.google.com/uc?id=1sw_08QZcLzCVbZ8VhL-vpM2jh7Dc7nVr'; 
+    var filter3ft   = 'http://drive.google.com/uc?id=1apKOcl7z2aywT6h7vJpAsK0qwuBkJnr0'; 
+    var filter3_5ft = 'http://drive.google.com/uc?id=13krSRA8IZSU5ei8KgRY4UdQiTRsV84lP'; 
+    var filter4ft   = 'http://drive.google.com/uc?id=1jZuLak4Lyw8_OjNlt6De0hsQ45IX1fr2'; 
+    var filter4_5ft = 'http://drive.google.com/uc?id=1nSjakRDgGcE2Mb5Y6nuK_R0OleFdvNrX'; 
+    var filter5ft   = 'http://drive.google.com/uc?id=13m7AFNcOw4rP9sH3brVow3ZJligjvHbW'; 
 
 
     // create KML overlays for each sea level 
+
+    var kmlLayer_5ft = new google.maps.KmlLayer(filter_5ft, {
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: null
+    });
+
+
     var kmlLayer1ft = new google.maps.KmlLayer(filter1ft, {
         suppressInfoWindows: true,
         preserveViewport: true,
         map: null
     });
 
-    // hide the layer 
-    // kmlLayer1ft.setMap(null);
+    var kmlLayer1_5ft = new google.maps.KmlLayer(filter1_5ft, {
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: null
+    });
+
 
     // 2ft
     var kmlLayer2ft = new google.maps.KmlLayer(filter2ft, {
@@ -106,7 +122,12 @@ async function initMap() {
         preserveViewport: true,
         map: null
     });
-    // kmlLayer2ft.setMap(null);
+
+    var kmlLayer2_5ft = new google.maps.KmlLayer(filter2_5ft, {
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: null
+    });
 
     // 3ft
     var kmlLayer3ft = new google.maps.KmlLayer(filter3ft, {
@@ -114,7 +135,12 @@ async function initMap() {
         preserveViewport: true,
         map: null
     });
-    // kmlLayer3ft.setMap(null);
+
+    var kmlLayer3_5ft = new google.maps.KmlLayer(filter3_5ft, {
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: null
+    });
 
     //4ft
     var kmlLayer4ft = new google.maps.KmlLayer(filter4ft, {
@@ -122,7 +148,12 @@ async function initMap() {
         preserveViewport: true,
         map: null
     });
-    // kmlLayer4ft.setMap(null);
+
+    var kmlLayer4_5ft = new google.maps.KmlLayer(filter4_5ft, {
+        suppressInfoWindows: true,
+        preserveViewport: true,
+        map: null
+    });
 
     // 5ft
     var kmlLayer5ft = new google.maps.KmlLayer(filter5ft, {
@@ -130,7 +161,6 @@ async function initMap() {
         preserveViewport: true,
         map: null
     });
-    // kmlLayer5ft.setMap(null);
 
     // get the slider and output fields in the HTML document
     var slider = document.getElementById("sliderRange"); 
@@ -147,21 +177,49 @@ async function initMap() {
         yearOutput.innerHTML = currentYear; 
         riseOutput.innerHTML = "0 Ft"; 
 
-        console.log(currentYear)
+        // console.log(currentYear)
 
-        if(currentYear < 2060){
+
+        // 0 ft
+        if(currentYear < 2045){
+            kmlLayer_5ft.setMap(null);
             kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
             kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
             kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
             kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
             riseOutput.innerHTML = "0 Ft"; 
+        } 
+
+        //.5 ft
+        else if(currentYear >= 2045 && currentYear < 2060){
+            // show .5 ft layer 
+            kmlLayer_5ft.setMap(map);
+
+            //hide all others 
+            kmlLayer1ft.setMap(null);
+            kmlLayer1_5ft.setMap(null);
+            kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
+            kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
+            kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
+            kmlLayer5ft.setMap(null);
+
+            // display seal level rise 
+            riseOutput.innerHTML = ".5 Ft"; 
         }
 
+        // 1 ft
         // if between year 2060 and 2090
-        else if(currentYear >= 2060 && currentYear < 2090){
+        else if(currentYear >= 2060 && currentYear < 2075){
             // show the current layer (1ft)
             kmlLayer1ft.setMap(map);
 
@@ -173,9 +231,32 @@ async function initMap() {
 
             // display seal level rise 
             riseOutput.innerHTML = "1 Ft"; 
+        }
         
+        //1.5 ft
+        else if(currentYear >= 2075 && currentYear < 2090){
+            // show 1.5 layer 
+            kmlLayer1_5ft.setMap(map);
+
+
+            //hide all others 
+            kmlLayer1ft.setMap(null);
+            kmlLayer2ft.setMap(null);
+            kmlLayer2_5ft.setMap(null);
+            kmlLayer3ft.setMap(null);
+            kmlLayer3_5ft.setMap(null);
+            kmlLayer4ft.setMap(null);
+            kmlLayer4_5ft.setMap(null);
+            kmlLayer5ft.setMap(null);
+
+            // display seal level rise 
+            riseOutput.innerHTML = "1.5 Ft"; 
+
+        }
+
+        // 2ft 
         // if between 2090 and 2120
-        } else if(currentYear >= 2090 && currentYear < 2120){
+        else if(currentYear >= 2090 && currentYear < 2120){
             // show the current layer (2ft)
             kmlLayer2ft.setMap(map);
 
@@ -188,6 +269,9 @@ async function initMap() {
             // display seal level rise 
             riseOutput.innerHTML = "2 Ft"; 
 
+        //2.5 ft
+
+        //3 ft
         // if between 2120 and 2140 
         }else if(currentYear >= 2120 && currentYear < 2140){
             // show the current layer (3ft)
@@ -202,6 +286,9 @@ async function initMap() {
             // display seal level rise 
             riseOutput.innerHTML = "3 Ft"; 
 
+        // 3.5 ft
+
+        //4ft 
         // if between 2140 and 2170 
         }else if(currentYear >= 2140 && currentYear < 2170){
             // show the current layer (4ft)
@@ -216,7 +303,10 @@ async function initMap() {
             // display seal level rise 
             riseOutput.innerHTML = "4 Ft"; 
         
+        
+        //4.5ft
 
+        //5ft 
         // if > 2170 
         }else if(currentYear >=2170){
             // show the current layer (5ft)

@@ -4,11 +4,11 @@
     <name>5ft-2170</name>
     <Style id="poly-0288D1-1000-255-nodesc-normal">
       <LineStyle>
-        <color>ffd18802</color>
+        <color>fff9c09c</color>
         <width>1</width>
       </LineStyle>
       <PolyStyle>
-        <color>ffd18802</color>
+        <color>fff9c09c</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
@@ -18,11 +18,11 @@
     </Style>
     <Style id="poly-0288D1-1000-255-nodesc-highlight">
       <LineStyle>
-        <color>ffd18802</color>
+        <color>fff9c09c</color>
         <width>1.5</width>
       </LineStyle>
       <PolyStyle>
-        <color>ffd18802</color>
+        <color>fff9c09c</color>
         <fill>1</fill>
         <outline>1</outline>
       </PolyStyle>
