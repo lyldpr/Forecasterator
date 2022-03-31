@@ -240,13 +240,12 @@ async function initMap() {
         
         //1.5 ft
         else if(currentYear >= 2075 && currentYear < 2090){
-            // show 1.5 layer 
+            // show 1 and 1.5 layer 
             kmlLayer1_5ft.setMap(map);
 
 
             //hide all others 
             kmlLayer_5ft.setMap(null);
-            kmlLayer1ft.setMap(null);
             kmlLayer2ft.setMap(null);
             kmlLayer2_5ft.setMap(null);
             kmlLayer3ft.setMap(null);
@@ -288,7 +287,7 @@ async function initMap() {
             kmlLayer_5ft.setMap(null);
             kmlLayer1ft.setMap(null);
             kmlLayer1_5ft.setMap(null);
-            kmlLayer2ft.setMap(null);
+            // kmlLayer2ft.setMap(null);
             kmlLayer3ft.setMap(null);
             kmlLayer3_5ft.setMap(null);
             kmlLayer4ft.setMap(null);
@@ -328,7 +327,7 @@ async function initMap() {
             kmlLayer1_5ft.setMap(null);
             kmlLayer2ft.setMap(null);
             kmlLayer2_5ft.setMap(null);
-            kmlLayer3ft.setMap(null);
+            // kmlLayer3ft.setMap(null);
             kmlLayer4ft.setMap(null);
             kmlLayer4_5ft.setMap(null);
             kmlLayer5ft.setMap(null);
@@ -368,7 +367,7 @@ async function initMap() {
             kmlLayer2_5ft.setMap(null);
             kmlLayer3ft.setMap(null);
             kmlLayer3_5ft.setMap(map);
-            kmlLayer4ft.setMap(null);
+            // kmlLayer4ft.setMap(null);
             kmlLayer5ft.setMap(null);
 
             // display seal level rise 
