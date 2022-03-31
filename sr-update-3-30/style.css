@@ -8,7 +8,7 @@ html, body {
 }
 
 h1, h2, h3, h4{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Verdana, 'Geneva', Tahoma, sans-serif;
     color: #5a8473;
 }
 
@@ -26,7 +26,9 @@ nav {
     text-align: center; 
     font-size: 99%;
     padding: .25em;
+    /* background-color: rgb(223, 241, 232); */
 } 
+
 nav ul{ 
     display: flex; 
     flex-flow: row nowrap;
@@ -35,10 +37,20 @@ nav ul{
 
 }
 
+nav a{text-decoration: none;}
+nav a:link { color: #216788; }
+nav a:visited { color: rgba(95, 163, 184, 0.534); }
+nav a:hover { 
+    color: rgba(95, 163, 184, 0.534);
+    border-bottom: #5a8473 2px solid;
+}
+
 
 /* SLIDER */ 
 .slidecontainer {
     width: 100%;
+    height: 15%;
+    /* background-color: rgb(223, 241, 232); */
 }
 
 #sliderRange{
@@ -51,7 +63,7 @@ nav ul{
     -webkit-appearance: none;
     width: 100%;
     height: 24px;
-    background: #f0f0f0;
+    background: ivory;
     outline: none;
     opacity:0.7;
     -webkit-transition: opacity .15s ease-in-out;
