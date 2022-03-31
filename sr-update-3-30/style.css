@@ -15,18 +15,18 @@ h1, h2, h3, h4{
 p, nav li{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #3c3c41;
-    line-height: 1.5em;
+    font-size: medium;
+    /* line-height: 1.5em; */
     margin-left: 5px;
     margin-right: 5px;
 }
 
 nav {  
     /* letter-spacing: 0.1em; */
-    font-weight: bold;
     text-align: center; 
     font-size: 99%;
     padding: .25em;
-    /* background-color: rgb(223, 241, 232); */
+    /* background-color:linen; */
 } 
 
 nav ul{ 
@@ -38,10 +38,10 @@ nav ul{
 }
 
 nav a{text-decoration: none;}
-nav a:link { color: #216788; }
-nav a:visited { color: rgba(95, 163, 184, 0.534); }
+/* nav a:link { color: #5a8473; } */
+nav a:visited { color: rgba(95, 163, 184); }
 nav a:hover { 
-    color: rgba(95, 163, 184, 0.534);
+    color: #5a8473(95, 163, 184, 0.534);
     border-bottom: #5a8473 2px solid;
 }
 
@@ -50,7 +50,7 @@ nav a:hover {
 .slidecontainer {
     width: 100%;
     height: 15%;
-    /* background-color: rgb(223, 241, 232); */
+    /* background-color: linen; */
 }
 
 #sliderRange{
@@ -63,7 +63,7 @@ nav a:hover {
     -webkit-appearance: none;
     width: 100%;
     height: 24px;
-    background: ivory;
+    background: rgb(245, 245, 245);
     outline: none;
     opacity:0.7;
     -webkit-transition: opacity .15s ease-in-out;

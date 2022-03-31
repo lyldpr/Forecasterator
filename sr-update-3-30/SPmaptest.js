@@ -169,8 +169,8 @@ async function initMap() {
     yearOutput.innerHTML = slider.value; 
      
 
-    // add a DOM listener to check slider
-    google.maps.event.addDomListener(slider, "change", function() {
+    // add a DOM listener to check slider year value
+    google.maps.event.addDomListener(slider, "input", function() {
 
         // output the year and starting sea level rise 
         currentYear = slider.value; 
