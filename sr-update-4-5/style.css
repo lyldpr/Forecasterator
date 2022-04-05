@@ -12,6 +12,17 @@ h1, h2, h3, h4{
     color: #5a8473;
 }
 
+#wrapper{
+    padding: 15px;
+    width: 70%;
+    height: fit-content;
+    margin: auto;
+}
+
+#wrapper h1{
+    text-align: center;
+}
+
 p, nav li{
     font-family: Georgia, 'Times New Roman', Times, serif;
     color: #3c3c41;
