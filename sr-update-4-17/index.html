@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Forcasterator</title>
+
+    <!--authorizing firebase-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+
+  <body>
+    <nav> 
+      <ul> 
+        <li> <a href = "about.html"> About </a> </li> 
+
+        <li> Total Active Locations: <span id = "activeLocations"> </span> </li> 
+
+        <li>Total Inactive Locations: <span id="inactiveLocations"> </span> </li> 
+
+        <li> Current Sea Level Rise: <span id = "rise"> </span> </li> 
+
+        <li> Average Price Per Night: $<span id="price"> </span> </li> 
+    </nav> 
+
+    <div id="map"></div><!--actual map that loads along with a required *restricted* API key-->
+
+    <div class="slidecontainer">
+      <input type="range" min="2022" max="2170" value="2022" class="slider-square" id="sliderRange">
+      <p> Year: <span id="year"></p>
+    </div>
+
+    <!--
+    <button id="resetBTN">Show All Neighborhoods</button>
+    -->
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKw_xSr57-PX3VPIPo02BhZ3EuhI3y6w&callback=initMap&v=weekly"
+      async></script>
+    <script src="SPmaptest.js"></script>
+  </body>
+
+</html>
+<!-- or  first key is firebase and second key is google maps api --> 
