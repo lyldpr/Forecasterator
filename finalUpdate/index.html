@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Forcasterator</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <!--authorizing firebase  AIRBNB 7% increase every 10 years, PROPERTY: 4% increase every 10 years-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+    <link rel="stylesheet" href="style.css"> 
+  </head>
+
+  <body>
+    <nav class="topBar"> 
+      <ul class="elementsBar"> 
+        <li class="elementsBar"> <a href = "about.html"> About </a> </li> 
+        
+        <li class="elementsBar"> Year: <span id="year"> </span> </li> 
+
+        <li class="elementsBar"> Total <span id = "activeLocations"> </span> </li> 
+
+        <li class="elementsBar"> Current Sea Level Rise: <span id = "rise"> </span> </li> 
+
+        <li class="elementsBar"> <span id="priceProp"> </span> </li> 
+
+        <li class="elementsBar"> <span id="price"> </span> </li> 
+
+    </nav> 
+
+    <div id="map"></div>
+    
+    <!--
+    actual map that loads along with a required *restricted* API key
+    <li>Total Inactive Locations: <span id="inactiveLocations"> </span> </li> 
+    -->
+
+    <div class="slidecontainer">
+      <input type="range" min="2022" max="2200" vale="2022" class="slider-square" id="sliderRange">
+    </div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDuKw_xSr57-PX3VPIPo02BhZ3EuhI3y6w&callback=initMap&libraries=geometry&v=weekly"
+      async></script>
+    <script src="SPmaptest1.js"></script>
+    <script src="geoxml3.js"></script>
+  </body>
+
+</html>
+<!-- or  first key is firebase and second key is google maps api --> 
