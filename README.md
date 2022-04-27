@@ -9,3 +9,8 @@ Giuliana Tosi
 Sammi Ramsden
 Charles Oscar
 Jaxson Lyles
+
+from the about page:
+"Forcasterator" is a web application designed to show how sea level rise in downtown Charleston will affect the prices of Air BnB locations throughout the city. Sea level rise is a widely discussed topic in Charleston, and we wanted to explore how this would affect tourism downtown. This tool visualizes the sea level rise and decrease of available properties as a way to illustrate the impact that this will have on the tourism industry. We have concluded that as sea level rise increases, there will be both less available properties, less walkability of downtown Charleston, and less availability of iconic Charleston landmarks. All of this will ultimately lead to an increase in property pricing and a decrease in overall tourism and quality of tourism.
+
+To use this application, the user simply slides the slider at the bottom of the screen to increase the year and sea level. As the sea level rise increases, Air BnB properties that are unavailable will appear 'underwater' on the map. Users can also click on neighborhoods to show the individual properties and their price per night information, as well as view average price per night of all locations on the top of the screen. 
